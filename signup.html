@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="container my-5 text-center" id="home">
+      <div class="row m-auto w-75 p-5">
+        <div class="col-md-12">
+          <div class="content">
+            <h1>Smart Login System</h1>
+            <form action="">
+              <input
+                id="signUpNameInp"
+                class="form-control my-3"
+                placeholder="Enter your name"
+                type="text"
+              />
+              <div
+                id="userNameAlert"
+                class="alert alert-danger pb-0 pt-3 d-none"
+              >
+                <p>
+                  "please enter any character from a to z or A to Z and
+                  containing any number from 0 to 9 with min 3"
+                </p>
+              </div>
+              <input
+                id="signUpEmailInp"
+                class="form-control my-3"
+                placeholder="Enter your email"
+                type="email"
+              />
+              <div
+                id="userEmailAlert"
+                class="alert alert-danger pb-0 pt-3 d-none"
+              >
+                <p>ex:name@example.com</p>
+              </div>
+              <input
+                id="signUpPasswordInp"
+                class="form-control my-3"
+                placeholder="Enter your password"
+                type="password"
+              />
+              <div
+                id="userPasswordAlert"
+                class="alert alert-danger pb-0 pt-3 d-none"
+              >
+                <p>
+                  Password must contains capital letter, small letter, numbers
+                  and special characters, minimum length 8
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="msgs text-center">
+            <p class="text-success d-none" id="confirmMsg">Success</p>
+            <p class="text-danger d-none" id="accountExistMsg">
+              email already exists ! Try another one.
+            </p>
+            <p class="text-danger d-none" id="tryAgainMsg">
+              signUp failed ! Try again
+            </p>
+          </div>
+          <button onclick="signUp()" class="btn btn-outline-info w-100 my-3">
+            Sign Up
+          </button>
+          <p class="text-white">
+            You have an account?
+            <a class="text-white" href="index.html">Sign In</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
